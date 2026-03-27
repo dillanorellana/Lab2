@@ -77,16 +77,13 @@ void pushBack(List * list, void * data) {
 
 void pushCurrent(List * list, void * data) {
     Node * newNode= createNode(data);   
-
+    //lista vacia
     if(list->head == NULL){
-        list->head = newNode;
-        list->tail = newNode;
-        list->current= newNode;
         return;
     }
 
     Node* der = list->current->next;
-
+    //conexiones
     newNode->prev = list->current;
     newNode->next = der;
 
