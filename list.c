@@ -38,9 +38,9 @@ List * createList() {
     List * listaNueva = (List *)malloc(sizeof(List));
     if(listaNueva==NULL) return NULL;
 
-    list->head = NULL;
-    list->tail= NULL;
-    list->current= NULL;
+    listaNueva->head = NULL;
+    listaNueva->tail= NULL;
+    listaNueva->current= NULL;
     
      return listaNueva;
 }
