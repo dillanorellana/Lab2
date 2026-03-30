@@ -156,6 +156,9 @@ void * popCurrent(List * list) {
     if(aux->prev == NULL) list->head = aux->next;
     else aux->prev->next = aux->next;
 
+    if(aux->next == NULL) list->tail = aux->prev;
+    else aux->next->prev = aux->prev;
+
     list->current= aux->next;
     free(aux);
     return dato;
